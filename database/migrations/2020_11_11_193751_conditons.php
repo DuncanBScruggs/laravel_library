@@ -23,6 +23,6 @@ class Conditons extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('conditions');
     }
 }

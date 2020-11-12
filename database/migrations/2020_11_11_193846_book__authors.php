@@ -13,7 +13,20 @@ class BookAuthors extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('book_authors', function (Blueprint $table) {
+            $table->bigIncrements('book_author_id');
+            $table->unsignedBigInteger('ref_author_id');
+            $table->unsignedBigInteger('ref_book_id');
+
+            $table->foreign('ref_author_id')
+                ->references('author_id')
+                ->on('authors')
+                ->onDelete('cascade');
+            $table->foreign('ref_book_id')
+                ->references('book_id')
+                ->on('books')
+                ->onDelete('cascade');
+        });
     }
 
     /**
@@ -23,6 +36,6 @@ class BookAuthors extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('book_authors');
     }
 }

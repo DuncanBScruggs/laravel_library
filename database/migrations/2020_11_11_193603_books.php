@@ -14,7 +14,7 @@ class Books extends Migration
     public function up()
     {
         Schema::create('books', function (Blueprint $table){
-            $table->bigIncrements('id');
+            $table->bigIncrements('book_id');
             $table->text('title');
             $table->text('excerpt');
             $table->char('isbn', 13);

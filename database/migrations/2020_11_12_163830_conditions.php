@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Genres extends Migration
+class Conditions extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class Genres extends Migration
      */
     public function up()
     {
-        Schema::create('genres', function (Blueprint $table){
-            $table->bigIncrements('genre_id');
-            $table->string('title');
+        Schema::create('conditions', function (Blueprint $table) {
+            $table->bigIncrements('condition_id');
+            $table->text('condition');
         });
     }
 
