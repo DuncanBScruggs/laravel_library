@@ -17,6 +17,7 @@ class Authors extends Migration
             $table->bigIncrements('author_id');
             $table->string('name');
             $table->datetime('dob');
+            $table->timestamps();
         });
     }
 

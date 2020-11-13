@@ -17,6 +17,7 @@ class BookAuthors extends Migration
             $table->bigIncrements('book_author_id');
             $table->unsignedBigInteger('ref_author_id');
             $table->unsignedBigInteger('ref_book_id');
+            $table->timestamps();
 
             $table->foreign('ref_author_id')
                 ->references('author_id')

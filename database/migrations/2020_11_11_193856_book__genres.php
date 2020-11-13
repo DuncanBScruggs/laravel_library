@@ -17,6 +17,7 @@ class BookGenres extends Migration
             $table->bigIncrements('book_genre_id');
             $table->unsignedBigInteger('ref_genre_id');
             $table->unsignedBigInteger('ref_book_id');
+            $table->timestamps();
 
             $table->foreign('ref_genre_id')
                 ->references('genre_id')

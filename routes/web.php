@@ -18,3 +18,10 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/register','UsersController@register');
+
+$router->get('/authors','AuthorsController@index');
+
+$router->get('/books','BooksController@index');
+$router->put('/books/{book_id}','BooksController@update');
+$router->post('/books','BooksController@create');
+$router->delete('/books','BooksController@deletebook');

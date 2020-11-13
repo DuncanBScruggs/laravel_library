@@ -16,6 +16,7 @@ class Conditions extends Migration
         Schema::create('conditions', function (Blueprint $table) {
             $table->bigIncrements('condition_id');
             $table->text('condition');
+            $table->timestamps();
         });
     }
 

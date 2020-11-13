@@ -23,6 +23,7 @@ class Checkouts extends Migration
             // $table->unsignedBigInteger('checked_out_condition');
             // $table->unsignedBigInteger('checked_in_condition');
             $table->integer('status');
+            $table->timestamps();
             
             
             // $table->foreign('checked_out_condition')
